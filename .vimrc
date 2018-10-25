@@ -33,7 +33,7 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 
-" $B%-!<%^%C%W(B
+" キーマップ
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
