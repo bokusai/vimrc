@@ -35,7 +35,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 autocmd InsertLeave * set nopaste
 
 
-" キーマップ
+" keymap
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
@@ -58,7 +58,7 @@ inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><T
 
 
 
-"Vundle 設
+" Vundle Setting
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
