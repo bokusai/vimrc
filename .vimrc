@@ -1,12 +1,15 @@
+" Character code 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,cp932,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set fileformats=unix,dos,mac
 set fenc=utf-8
+
 set nobackup
 set autoread
 set hidden
 set showcmd
 
+" View
 set number
 set nowrap
 set laststatus=2
