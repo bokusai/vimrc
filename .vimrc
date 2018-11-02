@@ -23,6 +23,7 @@ set showmatch
 set tabstop=4
 set autoindent
 
+" Invisible Character Visible
 set list
 set listchars=tab:^.
 autocmd VimEnter,Colorscheme * highlight SpecialKey cterm=NONE ctermfg=darkgray ctermbg=NONE
@@ -82,18 +83,22 @@ filetype plugin indent on    " required
 " Plugins URL
 Plugin 'https://github.com/scrooloose/nerdtree.git'
 Plugin 'https://github.com/StanAngeloff/php.vim'
-
-" Plugin colorscheme
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
+Plugin 'https://github.com/itchyny/lightline.vim'
+" colorscheme
 Plugin 'https://github.com/tomasr/molokai'							" molokai
 Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'		" sublimemonokai
-
+Plugin 'https://github.com/jacoborus/tender.vim'					" tender
+Plugin 'https://github.com/jdkanani/vim-material-theme'				" material-theme
 
 " Plugin key map
 nnoremap <C-e> :NERDTreeToggle<CR>
 
 " ColorScheme Setting
 syntax on
-colorscheme sublimemonokai
+colorscheme tender
 
 " MyCustom ColorScheme
-hi Comment ctermfg=blue
+" hi Comment ctermfg=blue
+" set background=dark
+
