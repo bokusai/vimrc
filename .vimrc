@@ -72,9 +72,9 @@ filetype plugin indent on
 
 " Plugins URL
 Plugin 'https://github.com/scrooloose/nerdtree.git'					" ディレクトリの階層構造
+Plugin 'https://github.com/scrooloose/nerdcommenter'				" コメントアウトの簡易化
 Plugin 'https://github.com/ctrlpvim/ctrlp.vim'						" ファイル検索
 Plugin 'https://github.com/vim-airline/vim-airline'					" ステータスライン装飾
-Plugin 'https://github.com/scrooloose/nerdcommenter'				" コメントアウトの簡易化
 " langrige Plugins
 Plugin 'https://github.com/StanAngeloff/php.vim'					" PHP Syntax
 Plugin 'https://github.com/pangloss/vim-javascript'					" JavaScript Syntax
@@ -90,6 +90,7 @@ Plugin 'https://github.com/jdkanani/vim-material-theme'				" material-theme
 " NERDTree Setting
 nnoremap <C-e> :NERDTreeToggle<CR>
 " NERDCommenter Setting
+filetype on
 let g:NERDSpaceDelims=1
 " CtrlP Setting
 let g:ctrlp_match_window = 'max:50'
