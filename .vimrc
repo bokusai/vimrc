@@ -1,4 +1,4 @@
-" Character code 
+" Character Code 
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set fileformats=unix,dos,mac
@@ -10,7 +10,7 @@ set autoread
 set hidden
 set showcmd
 
-" View
+" Views
 set number
 set nowrap
 set laststatus=2
@@ -40,11 +40,9 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 autocmd InsertLeave * set nopaste
 
-" PHP Setting
-"let g:php_baselib = 1
-"let g:php_htmlInStrings = 1
-"let g:php_noShortTags = 1
-"let g:php_sql_query = 1
+" auto comment out denable
+autocmd Filetype * set formatoptions-=r
+autocmd Filetype * set formatoptions-=o
 
 " keymap
 nnoremap j gj
@@ -62,43 +60,46 @@ inoremap (<Enter> ()<Left><CR><ESC><S-o><TAB>
 inoremap $ $<Right>
 inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><TAB>
 
-" set whichwrap=b,s,h,l,<,>,[,],~
 
-
-" Vundle Setting
+" Vundle Basic Setting
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
-
-"Plugin 'tpope/vim-fugitive'
-"Plugin 'git://git.wincent.com/command-t.git'
-"Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()
+filetype plugin indent on
 
 " Plugins URL
-Plugin 'https://github.com/scrooloose/nerdtree.git'
-Plugin 'https://github.com/StanAngeloff/php.vim'
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim'
-Plugin 'https://github.com/itchyny/lightline.vim'
-" colorscheme
+Plugin 'https://github.com/scrooloose/nerdtree.git'					" ディレクトリの階層構造
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'						" ファイル検索
+Plugin 'https://github.com/vim-airline/vim-airline'					" ステータスライン装飾
+Plugin 'https://github.com/scrooloose/nerdcommenter'				" コメントアウトの簡易化
+" langrige Plugins
+Plugin 'https://github.com/StanAngeloff/php.vim'					" PHP Syntax
+Plugin 'https://github.com/pangloss/vim-javascript'					" JavaScript Syntax
+" ColorScheme Plugins
 Plugin 'https://github.com/tomasr/molokai'							" molokai
 Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'		" sublimemonokai
 Plugin 'https://github.com/jacoborus/tender.vim'					" tender
 Plugin 'https://github.com/jdkanani/vim-material-theme'				" material-theme
 
-" Plugin key map
+" ------------------------------------------
+" Plugins Setting
+" ------------------------------------------
+" NERDTree Setting
 nnoremap <C-e> :NERDTreeToggle<CR>
+" NERDCommenter Setting
+let g:NERDSpaceDelims=1
+" CtrlP Setting
+let g:ctrlp_match_window = 'max:50'
 
 " ColorScheme Setting
-syntax on
+" syntax on
 colorscheme tender
 
 " MyCustom ColorScheme
 " hi Comment ctermfg=blue
 " set background=dark
+hi LineNr ctermfg=darkgreen guifg=Grey guibg=Grey90
 
