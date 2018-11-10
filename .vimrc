@@ -51,7 +51,6 @@ vnoremap j gj
 vnoremap k gk
 noremap! <C-?> <C-h>
 nnoremap $ $<Right>
-nnoremap <BS> i<BS><ESC><RIGHT>
 
 inoremap jj <Esc>
 " inoremap { {}<Left>
@@ -115,7 +114,8 @@ let g:NERDSpaceDelims=1
 let g:ctrlp_match_window = 'max:30'
 " vim-airline
 let g:airline_theme = 'luna'
-
+" ctrlP
+set wildignore+=*/tmp/*,*/lib/*,*.so,*.swp,*.zip,*.jpg,*.png
 " ColorScheme Setting
 " syntax on
 colorscheme tender
