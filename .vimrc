@@ -1,4 +1,4 @@
-" Character Code 
+" Character Code
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,cp932,euc-jp,sjis
 set fileformats=unix,dos,mac
@@ -18,10 +18,10 @@ set ruler
 set scrolloff=5
 set t_Co=256
 
-set virtualedit=onemore
 set showmatch
 set tabstop=4
-set autoindent
+set smartindent
+set noautoindent
 
 " Invisible Character Visible
 set list
@@ -48,17 +48,19 @@ autocmd Filetype * set formatoptions-=o
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
-noremap k gk
+vnoremap k gk
 noremap! <C-?> <C-h>
 nnoremap $ $<Right>
+nnoremap <BS> i<BS><ESC><RIGHT>
 
 inoremap jj <Esc>
 " inoremap { {}<Left>
-inoremap {<Enter> {}<Left><CR><ESC><S-o><TAB>
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
 " inoremap ( ()
-inoremap (<Enter> ()<Left><CR><ESC><S-o><TAB>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 inoremap $ $<Right>
 inoremap pfunc public<Space>function<Space>name()<Space>{}<Left><CR><ESC><S-o><TAB>
+
 
 " Tab Control
 nnoremap sl gt
@@ -81,19 +83,22 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Plugins URL
-Plugin 'https://github.com/scrooloose/nerdtree.git'					" ディレクトリの階層構造
-Plugin 'https://github.com/scrooloose/nerdcommenter'				" コメントアウトの簡易化
-Plugin 'https://github.com/ctrlpvim/ctrlp.vim'						" ファイル検索
-Plugin 'https://github.com/vim-airline/vim-airline'					" ステータスライン装飾
-Plugin 'https://github.com/vim-airline/vim-airline-themes'			" airlineのテーマ
+Plugin 'https://github.com/scrooloose/nerdtree.git'				" ディレクトリの階層構造
+Plugin 'https://github.com/scrooloose/nerdcommenter'			" コメントアウトの簡易化
+Plugin 'https://github.com/ctrlpvim/ctrlp.vim'					" ファイル検索
+Plugin 'https://github.com/tpope/vim-surround'					" テキストオブジェクトの拡張
 " langrige Plugins
-Plugin 'https://github.com/StanAngeloff/php.vim'					" PHP Syntax
-Plugin 'https://github.com/pangloss/vim-javascript'					" JavaScript Syntax
+Plugin 'https://github.com/mattn/emmet-vim'						" HTML CSS コーディング補助
+Plugin 'https://github.com/pangloss/vim-javascript'				" JavaScript Syntax
+Plugin 'https://github.com/StanAngeloff/php.vim'				" PHP Syntax
+" Views Plugins
+Plugin 'https://github.com/vim-airline/vim-airline'				" ステータスライン装飾
+Plugin 'https://github.com/vim-airline/vim-airline-themes'		" airlineのテーマ
 " ColorScheme Plugins
-Plugin 'https://github.com/tomasr/molokai'							" molokai
-Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'		" sublimemonokai
-Plugin 'https://github.com/jacoborus/tender.vim'					" tender
-Plugin 'https://github.com/jdkanani/vim-material-theme'				" material-theme
+Plugin 'https://github.com/tomasr/molokai'						" molokai
+Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'	" sublimemonokai
+Plugin 'https://github.com/jacoborus/tender.vim'				" tender
+Plugin 'https://github.com/jdkanani/vim-material-theme'			" material-theme
 
 call vundle#end()
 filetype plugin indent on
