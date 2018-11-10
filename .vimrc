@@ -79,8 +79,6 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-call vundle#end()
-filetype plugin indent on
 
 " Plugins URL
 Plugin 'https://github.com/scrooloose/nerdtree.git'					" ディレクトリの階層構造
@@ -96,6 +94,9 @@ Plugin 'https://github.com/tomasr/molokai'							" molokai
 Plugin 'https://github.com/ErichDonGubler/vim-sublime-monokai'		" sublimemonokai
 Plugin 'https://github.com/jacoborus/tender.vim'					" tender
 Plugin 'https://github.com/jdkanani/vim-material-theme'				" material-theme
+
+call vundle#end()
+filetype plugin indent on
 
 " ------------------------------------------
 " Plugins Setting
